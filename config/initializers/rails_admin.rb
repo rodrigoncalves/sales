@@ -1,5 +1,13 @@
 RailsAdmin.config do |config|
 
+  config.main_app_name = ["Representantes Comerciais", ""]
+
+  config.navigation_static_links = {
+    'OneBitCode' => 'http://onebitcode.com'
+  }
+
+  config.navigation_static_label = "Links Úteis"
+
   ### Popular gems integration
 
   ## == Devise ==
