@@ -9,6 +9,21 @@ pt-BR:
       client:
         one: Cliente
         other: Clientes
+      product:
+        one: Produto
+        other: Produtos
+      discount:
+        one: Desconto
+        other: Descontos
+      user:
+        one: Usuário
+        other: Usuários
+      sale:
+        one: Venda
+        other: Vendas
+      comission:
+        one: Comissão
+        other: Comissões
     attributes:
       client:
         name: "Nome"
