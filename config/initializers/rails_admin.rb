@@ -1,9 +1,12 @@
 RailsAdmin.config do |config|
 
+  require Rails.root.join('lib', 'rails_admin', 'rails_admin_pdf.rb')
+  RailsAdmin::Config::Actions.register(RailsAdmin::Config::Actions::Pdf)
+
   config.main_app_name = ["Representantes Comerciais", ""]
 
   config.navigation_static_links = {
-    'OneBitCode' => 'http://onebitcode.com'
+    'OneBitCode' => 'https://onebitcode.com'
   }
 
   config.navigation_static_label = "Links Úteis"
@@ -29,10 +32,10 @@ RailsAdmin.config do |config|
 
   ## == Gravatar integration ==
   ## To disable Gravatar integration in Navigation Bar set to false
-  # config.show_gravatar = true
+  # config.show_gravatar true
 
   config.model Sale do
-  navigation_icon 'fa fa-money'
+    navigation_icon 'fa fa-money'
     create do
       field :client
       field :sale_date
@@ -110,26 +113,6 @@ RailsAdmin.config do |config|
     end
   end
 
-  config.model ProductQuantity do
-    visible false
-  end
-
-  config.model Address do
-    visible false
-  end
-
-  config.model ProductQuantity do
-    edit do
-      field :product
-      field :quantity
-
-      field :user_id, :hidden do
-        default_value do
-          bindings[:view]._current_user.id
-        end
-      end
-    end
-  end
 
   config.model Discount do
     parent Product
@@ -157,4 +140,36 @@ RailsAdmin.config do |config|
     visible false
   end
 
+
+  config.model ProductQuantity do
+    edit do
+      field :product
+      field :quantity
+
+      field :user_id, :hidden do
+        default_value do
+          bindings[:view]._current_user.id
+        end
+      end
+    end
+  end
+
+  config.actions do
+    dashboard                     # mandatory
+    index                         # mandatory
+    new
+    export
+    bulk_delete
+    show
+    edit
+    delete
+    show_in_app
+    pdf do
+      only User
+    end
+
+    ## With an audit adapter, you can add:
+    # history_index
+    # history_show
+  end
 end
