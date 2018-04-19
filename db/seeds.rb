@@ -8,7 +8,7 @@ Product.create name: 'Smartphone', description:'Um smartphone novo ...', status:
 Product.create name: 'Tablet', description:'Um tablet novo ...', status: :active, price: 20
 
 # Criando um desconto de exemplo
-Discount.create name: 'Desconto carnaval', description: 'Aplique esse desconto no carnaval', value: '10', kind: :porcent, status: :active
+Discount.create name: 'Desconto carnaval', description: 'Aplique esse desconto no carnaval', value: '10', kind: :percent, status: :active
 Discount.create name: 'Desconto carnaval dinheiro', description: 'Aplique esse desconto quando possível', value: '10', kind: :money, status: :active
 
 # Crindo client
