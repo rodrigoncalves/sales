@@ -1,26 +1,32 @@
-<h2>Log in</h2>
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+
+  <div class="thumbnail">
+    <%= image_tag("https://yt3.ggpht.com/-CUIo7JhjYLo/AAAAAAAAAAI/AAAAAAAAAAA/ii3Q3zwVITc/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg") %>
   </div>
+  <h4>IBF Admin</h4>
 
   <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "#{t'helpers.placeholder.email'}" %>
   </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "off", placeholder: "#{t'helpers.placeholder.password'}" %>
+  </div>
 
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: "button" %>
   </div>
-<% end %>
+
+  <li>
+  <% if devise_mapping.rememberable? -%>
+    <div class="field">
+      <%= f.label :remember_me %>
+      <%= f.check_box :remember_me %>
+    </div>
+  <% end %>
+  </li>
 
 <%= render "devise/shared/links" %>
+
+<% end %>

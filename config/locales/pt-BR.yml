@@ -160,3 +160,7 @@ pt-BR:
         skip_header: "Sem cabeçalho"
         skip_header_help: "Não gerar cabeçalhos para (Campos sem cabeçalho)"
         default_col_sep: ","
+  helpers:
+    placeholder:
+      email: "E-mail"
+      password: "Senha"
