@@ -5,7 +5,8 @@
   <div class="thumbnail">
     <%= image_tag("https://yt3.ggpht.com/-CUIo7JhjYLo/AAAAAAAAAAI/AAAAAAAAAAA/ii3Q3zwVITc/s288-mo-c-c0xffffffff-rj-k-no/photo.jpg") %>
   </div>
-  <h4>IBF Admin</h4>
+
+  <h4>Sistema IBF</h4>
 
   <div class="field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "#{t'helpers.placeholder.email'}" %>
@@ -14,19 +15,19 @@
     <%= f.password_field :password, autocomplete: "off", placeholder: "#{t'helpers.placeholder.password'}" %>
   </div>
 
+  <li>
+    <% if devise_mapping.rememberable? -%>
+      <div class="field">
+        <%= f.label :remember_me %>
+        <%= f.check_box :remember_me %>
+      </div>
+    <% end %>
+  </li>
+
   <div class="actions">
     <%= f.submit "Log in", class: "button" %>
   </div>
 
-  <li>
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.label :remember_me %>
-      <%= f.check_box :remember_me %>
-    </div>
-  <% end %>
-  </li>
-
-<%= render "devise/shared/links" %>
+  <%= render "devise/shared/links" %>
 
 <% end %>
