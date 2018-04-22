@@ -9,7 +9,6 @@ body {
 }
 
 h4 {
-  font-family: 'Source Sans Pro', sans-serif;
   font-size:2em;
   font-weight:300;
   margin-bottom:25px;
@@ -17,7 +16,7 @@ h4 {
   text-shadow:1px 1px 0px white;
 }
 
-input {
+.login-input {
   display:block;
   width:315px;
   padding:14px;
@@ -31,14 +30,14 @@ input {
   font-size:16px;
 }
 
-input:focus {
+.input:focus {
   background:#fafafa;
 }
 
-li {
+.remember-me {
   position:absolute;
-  right:40px;
-  bottom:62px;
+  right:50px;
+  bottom:50px;
   list-style:none;
 }
 
@@ -52,11 +51,10 @@ a, a:visited {
           transition: all .3s ease-in-out;
 }
 
-.button {
-  /* position:relative; */
+.login-button {
+  position:relative;
   float: left;
-  display: inline-block;
-  width:145px;
+  width:200px;
   margin-top:10px;
   background:#3498db;
   color:#fff;
