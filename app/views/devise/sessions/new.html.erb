@@ -1,17 +1,3 @@
-<% if flash[:notice].present? %>
-  <div class="alert alert-info">
-    <span class="glyphicon glyphicon-info-sign"></span>
-    <%= flash[:notice] %>
-  </div>
-<% end %>
-
-<% if flash[:alert].present? %>
-  <div class="alert alert-danger">
-    <span class="glyphicon glyphicon-exclamation-sign"></span>
-    <%= flash[:alert] %>
-  </div>
-<% end %>
-
 <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -21,6 +7,20 @@
   </div>
 
   <h4>Sistema IBF</h4>
+
+  <% if flash[:notice].present? %>
+    <div class="alert alert-info">
+      <span class="glyphicon glyphicon-info-sign"></span>
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+
+  <% if flash[:alert].present? %>
+    <div class="alert alert-danger">
+      <span class="glyphicon glyphicon-exclamation-sign"></span>
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
 
   <div class="field">
     <%= f.email_field :email, class: "login-input", autofocus: true, autocomplete: "email", placeholder: "#{t'helper.placeholder.email'}" %>
