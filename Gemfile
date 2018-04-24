@@ -38,6 +38,7 @@ gem 'devise'
 gem 'cancancan', '~> 1.15.0'
 gem 'carrierwave'
 gem 'rails_admin_rollincode', git: 'https://github.com/rodrigoncalves/rails_admin_theme.git'
+gem 'bootstrap-sass', '~> 3.3.7'
 
 # Gem para gerar os pdfs
 gem 'prawn-rails'
