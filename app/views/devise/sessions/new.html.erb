@@ -23,23 +23,32 @@
   <% end %>
 
   <div class="field">
-    <%= f.email_field :email, class: "login-input", autofocus: true, autocomplete: "email", placeholder: "#{t'helper.placeholder.email'}" %>
+    <%= f.email_field :email, class: "form-control input-lg", autofocus: true, autocomplete: "email", placeholder: "#{t'helper.placeholder.email'}" %>
   </div>
   <div class="field">
-    <%= f.password_field :password, class: "login-input", autocomplete: "off", placeholder: "#{t'helper.placeholder.password'}" %>
+    <%= f.password_field :password, class: "form-control input-lg", autocomplete: "off", placeholder: "#{t'helper.placeholder.password'}" %>
   </div>
-
 
   <% if devise_mapping.rememberable? -%>
-    <div class="field remember-me">
-      <%= f.check_box :remember_me %>
-      <%= f.label t('helper.label.remember_me') %>
+    <div class="row">
+      <div class="col">
+        <div class="actions">
+          <%= f.submit "Login", class: "btn btn-primary form-control input-lg" %>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label t('helper.label.remember_me') %>
+        </div>
+      </div>
+    </div>
+  <% else %>
+    <div class="actions">
+      <%= f.submit "Login", class: "btn btn-primary form-control input-lg" %>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit "Login", class: "login-input login-button" %>
-  </div>
 
   <%= render "devise/shared/links" %>
 
