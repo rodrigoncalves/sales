@@ -35,6 +35,15 @@ form {
 }
 
 .alert {
-  padding: 5px;
+  padding: 4px;
   height: 32px;
+}
+
+#remember-me {
+  margin-top: 15px;
+  text-align: left;
+}
+
+#login-button {
+  margin-top: 5px;
 }

@@ -36,25 +36,15 @@
   </div>
 
   <% if devise_mapping.rememberable? -%>
-    <div class="row">
-      <div class="col">
-        <div class="actions">
-          <%= f.submit "Login", class: "btn btn-primary form-control input-lg" %>
-        </div>
-      </div>
-
-      <div class="col">
-        <div class="field">
-          <%= f.check_box :remember_me %>
-          <%= f.label t('helper.label.remember_me') %>
-        </div>
-      </div>
-    </div>
-  <% else %>
-    <div class="actions">
-      <%= f.submit "Login", class: "btn btn-primary form-control input-lg" %>
+    <div class="field" id="remember-me">
+      <%= f.check_box :remember_me %>
+      <%= f.label t('helper.label.remember_me') %>
     </div>
   <% end %>
+
+  <div class="actions">
+    <%= f.submit "Login", class: "btn btn-primary form-control input-lg", id: "login-button" %>
+  </div>
 
   <%= render "devise/shared/links" %>
 
