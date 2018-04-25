@@ -10,6 +10,9 @@
 
   <% if flash[:notice].present? %>
     <div class="alert alert-info">
+      <%= button_tag '', class: 'close', data: { dismiss:'alert' } do %>
+        <span aria-hidden="true">&times;</span>
+      <% end %>
       <span class="glyphicon glyphicon-info-sign"></span>
       <%= flash[:notice] %>
     </div>
@@ -17,6 +20,9 @@
 
   <% if flash[:alert].present? %>
     <div class="alert alert-danger">
+      <%= button_tag '', class: 'close', data: { dismiss:'alert' } do %>
+        <span aria-hidden="true">&times;</span>
+      <% end %>
       <span class="glyphicon glyphicon-exclamation-sign"></span>
       <%= flash[:alert] %>
     </div>

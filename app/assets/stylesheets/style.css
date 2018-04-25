@@ -84,3 +84,7 @@ form {
           box-shadow: 0px 1px 0px #ad392d, inset 0px 1px 0px white;
   box-shadow: 20px 20px 20px;
 }
+
+.alert {
+  /* height: 32px; */
+}
