@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  gender_id: 1
+  birthdate: 2018-05-10 00:14:15
+  cep: MyString
+  address: MyString
+  district: MyString
+  state_id: 1
+  email: MyString
+  cpf: MyString
+  maritial_status_id: 1
+  profession: MyString
+  grade_level: MyString
+  status: 1
+
+two:
+  name: MyString
+  gender_id: 1
+  birthdate: 2018-05-10 00:14:15
+  cep: MyString
+  address: MyString
+  district: MyString
+  state_id: 1
+  email: MyString
+  cpf: MyString
+  maritial_status_id: 1
+  profession: MyString
+  grade_level: MyString
+  status: 1

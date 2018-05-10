@@ -34,6 +34,12 @@ RailsAdmin.config do |config|
   ## To disable Gravatar integration in Navigation Bar set to false
   # config.show_gravatar true
 
+  config.model Member do
+    navigation_label 'Membro'
+    label_plural 'Membros'
+    weight -1
+  end
+
   config.model Sale do
     navigation_icon 'fa fa-money'
     create do
