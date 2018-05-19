@@ -1,3 +1,5 @@
+require 'time'
+
 RailsAdmin.config do |config|
 
   require Rails.root.join('lib', 'rails_admin', 'rails_admin_pdf.rb')
@@ -35,6 +37,10 @@ RailsAdmin.config do |config|
   # config.show_gravatar true
 
   config.model Member do
+    fields_of_type :datetime do
+      strftime_format "%d/%m/%Y"
+    end
+
     navigation_label 'Membro'
     label_plural 'Membros'
     weight -1
